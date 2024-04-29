@@ -3,10 +3,10 @@
 Quantile sketch is datastructure that provides
 * small in-memory footprint for ingested data streams
 * fast merges of multiple sketches
-* accuracy for percentile computation guaranteed to be above a user-defined threshold
+* error for percentile computation guaranteed to be below a user-defined threshold
 * fast percentile computation
 
-Running the example in `main.go` creates a `100` quantile sketches with an accuracy below `0.001` each which ingest `1000` values `10` times from a normal distribution. The sketches are then all merged together to produce the output below.
+Running the example in `main.go` creates a `100` quantile sketches with an error below `0.001` each which ingest `1000` values `10` times from a normal distribution. The sketches are then all merged together to produce the output below.
 ```
 p50 -> -0.00017495121686582989
 p90 -> 1.280178578089975
